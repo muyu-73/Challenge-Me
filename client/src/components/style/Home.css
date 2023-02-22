@@ -1,0 +1,33 @@
+.home-video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+
+.home-container {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+.home-container > h1 {
+  color: #fff;
+  font-size: 70px;
+  margin-top: -100px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.home-container > p {
+  margin: 8px;
+  color: #fff;
+  font-size: 32px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}

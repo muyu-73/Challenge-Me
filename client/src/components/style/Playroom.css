@@ -1,0 +1,239 @@
+.playroom-body {
+  width: 100vw;
+  height: 84vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playroom-container {
+  min-width: 85vw;
+  width: auto;
+  min-height: 85vh;
+  height: auto;
+  position: relative;
+  top: 4vh;
+  outline: thick double #ffffff;
+  background-color: #ffffffc3;
+}
+
+.playroom-container > h1 {
+  margin: 3px;
+  color: #161289;
+  font-family: "Great Vibes", cursive;
+  font-size: 50px;
+  font-weight: revert;
+  text-align: center;
+  text-shadow: 6px 7px 0px rgb(164, 181, 192);
+}
+
+.playroom-code-container {
+  border: #38ade3 dotted;
+  width: fit-content;
+  float: right;
+  padding: 10px 10px;
+  margin-right: 20px;
+  position: fixed;
+  top: 20px;
+}
+
+.playroom-code {
+  text-align: center;
+  font-family: "Bitter", serif;
+  font-size: 18px;
+  color: #3933d6;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.numPlayers {
+  font-family: "Great Vibes", cursive;
+  font-size: 20px;
+  margin-left: 20px;
+  border-bottom: #38ade3 1px;
+  width: fit-content;
+  margin-top: 9px;
+  margin-bottom: 10px;
+}
+
+.countdown-container {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  top: 22vh;
+  left: 79.5vw;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(69, 1, 255, 0.9);
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.countdown-container::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px solid rgba(69, 1, 255, 0.733);
+  border-radius: 50%;
+  background: #d0cfcf;
+}
+
+.countdownSpinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 28px;
+  transform-origin: 0 0;
+  background-image: linear-gradient(rgb(255, 0, 0), transparent);
+  animation: spin 1s infinite linear;
+  z-index: 0;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.countdownNumber {
+  position: relative;
+  top: 15px;
+  left: 0px;
+  z-index: 1;
+  font-family: "Droid serif", serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.question {
+  flex: 4;
+  margin: 20px auto;
+  width: 75%;
+  height: auto;
+  padding: 16px;
+  background-color: rgba(81, 88, 192, 0.726);
+  border-radius: 16px;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.question > h1 {
+  font-family: "Trocchi", serif;
+  font-size: 25px;
+}
+
+.question-options {
+  list-style: none;
+}
+
+.question-option {
+  margin-top: 13px;
+  background-color: rgba(83, 164, 191, 0.776);
+  padding: 16px;
+  border: 3px solid white;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.question-option:hover {
+  background-color: rgb(0, 135, 181);
+  transform: translateY(-5px);
+}
+
+.question-option:active {
+  transform: translateY(-2px);
+  background-color: rgb(0, 135, 181);
+}
+
+.result-and-answer-container {
+  margin: 20px auto;
+  width: 65%;
+  height: auto;
+  padding: 16px;
+  background-color: rgba(156, 184, 35, 0.694);
+  border-radius: 16px;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.playroom-button {
+  position: absolute;
+  display: inline-block;
+  bottom: 3vh;
+  right: 3vw;
+  background-color: #38ade3;
+  color: #ffffff;
+  border-radius: 100px;
+  padding: 10px 10px;
+  font-family: sans-serif;
+  transition: all 0.2s;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(15, 12, 202);
+}
+
+.playroom-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(94, 54, 236, 0.2);
+}
+
+.playroom-button:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(94, 54, 236, 0.2);
+}
+
+.playroom-button::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.playroom-button:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.playroom-button-white {
+  background-color: #38ade3;
+  color: rgb(255, 255, 255);
+}
+
+.playroom-button-white::after {
+  background-color: #38ade3;
+}
+
+.playroom-button-animated {
+  animation: moveInBottom 1.5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

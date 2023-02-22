@@ -1,0 +1,33 @@
+.rank {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin: 20px 10px;
+}
+
+.player {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.div-form {
+  margin: 10px 20px;
+  text-align: center;
+  font-size: large;
+  font-family: "Trocchi", serif;
+  min-width: 58px;
+}
+
+.ava {
+  width: 6vh;
+  height: auto;
+}
+
+.score {
+  min-width: 58px;
+}

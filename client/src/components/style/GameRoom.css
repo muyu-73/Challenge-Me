@@ -1,0 +1,343 @@
+.gameroom-body {
+  width: 100vw;
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+}
+
+.gameroom-backgroud-video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+
+.gameroom-vedio {
+  display: flex;
+  flex: 1;
+  align-content: center;
+  align-items: center;
+  margin: 15px;
+  width: auto;
+  height: 130px;
+  background-color: #ffffff;
+  border: thick double #7a8cdb;
+  border-radius: 10px;
+  justify-content: space-around;
+}
+
+.myVedio {
+  flex: 1;
+  width: 150px;
+  height: 150px;
+  color: #161289;
+  margin: 0px 10px;
+  border: thick #b5c1f8;
+}
+
+.gameroom-container {
+  flex: 1;
+  min-width: 92vw;
+  width: auto;
+  min-height: 71vh;
+  height: auto;
+  outline: thick double #ffffff;
+  background-color: #ffffffc3;
+}
+
+.gameroom-container > h1 {
+  margin: 3px;
+  color: #161289;
+  font-family: "Great Vibes", cursive;
+  font-size: 50px;
+  font-weight: revert;
+  text-align: center;
+  text-shadow: 6px 7px 0px rgb(164, 181, 192);
+}
+
+.gameroom-code-container {
+  display: block;
+  border: #38ade3 dotted;
+  width: fit-content;
+  float: right;
+  padding: 10px 10px;
+  margin-right: 20px;
+}
+
+.gameroom-code {
+  text-align: center;
+  font-family: "Bitter", serif;
+  font-size: 18px;
+  color: #3933d6;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.numPlayers {
+  font-family: "Great Vibes", cursive;
+  font-size: 20px;
+  margin-left: 20px;
+  border-bottom: #38ade3 1px;
+  width: fit-content;
+  margin-top: 9px;
+  margin-bottom: 10px;
+}
+
+.countdown-container {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  top: 5vh;
+  right: -87vw;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(69, 1, 255, 0.9);
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.countdown-container::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px solid rgba(69, 1, 255, 0.733);
+  border-radius: 50%;
+  background: #d0cfcf;
+}
+
+.countdownSpinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 20px;
+  transform-origin: 0 0;
+  background-image: linear-gradient(rgb(255, 0, 0), transparent);
+  animation: spin 1s infinite linear;
+  z-index: 0;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.timer {
+  position: relative;
+  top: 11px;
+  left: 0px;
+  z-index: 2;
+  font-family: "Droid serif", serif;
+  font-weight: bold;
+  font-size: 35px;
+  color: black;
+}
+
+.during-questions {
+  display: flex;
+  margin: 10px 30px;
+  margin-top: 15px;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: flex-start;
+  min-height: 43vh;
+}
+
+.question {
+  flex: 2.5;
+  margin: 20px 10px;
+  width: 75%;
+  height: auto;
+  padding: 16px;
+  background-color: rgba(81, 88, 192, 0.726);
+  border-radius: 16px;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.question > h1 {
+  font-family: "Trocchi", serif;
+  font-size: 25px;
+  margin: 10px 10px;
+}
+
+.question-options {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.question-option {
+  margin-top: 13px;
+  background-color: rgba(83, 164, 191, 0.776);
+  padding: 16px;
+  border: 3px solid white;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.question-option:hover {
+  background-color: rgb(0, 135, 181);
+  transform: translateY(-5px);
+}
+
+.question-option:active {
+  transform: translateY(-2px);
+  background-color: rgb(0, 135, 181);
+}
+
+.result-and-answer-container {
+  margin: 20px auto;
+  width: 65%;
+  height: auto;
+  padding: 16px;
+  background-color: rgba(156, 184, 35, 0.694);
+  border-radius: 16px;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.button {
+  width: 120px;
+  background-color: #38ade3;
+  color: #ffffff;
+  border-radius: 100px;
+  padding: 10px 20px;
+  font-family: sans-serif;
+  transition: all 0.2s;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(15, 12, 202);
+}
+
+.button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(94, 54, 236, 0.2);
+}
+
+.button:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(94, 54, 236, 0.2);
+}
+
+.button::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.button:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.button-white {
+  background-color: #38ade3;
+  color: rgb(255, 255, 255);
+}
+
+.button-white::after {
+  background-color: #38ade3;
+}
+
+.button-animated {
+  animation: moveInBottom 1.5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+.play-button-position {
+  position: absolute;
+  bottom: 7vh;
+  right: 10vw;
+}
+
+.leave-button-position {
+  position: absolute;
+  bottom: 7vh;
+  left: 10vw;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.gameover {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 92%;
+  width: 100%;
+  display: flex;
+  z-index: 100;
+  color: rgb(209, 161, 72);flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: stretch;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 100;
+  color: rgb(209, 161, 72);
+  position:absolute;
+}
+
+.gameover-title {
+  display: flex;
+  max-height: 300px;
+  flex: 2;
+  font-family: "Great Vibes", cursive;
+  font-size: 50px;
+  margin: 30px;
+}
+
+.gameover-score {
+  flex: 1;
+  font-family: "Trocchi", serif;
+  font-size: 30px;
+  margin: 30px;
+}
+
+.gameover-rank{
+  flex: 1;
+  font-family: "Trocchi", serif;
+  font-size: 30px;
+  margin: 30px;
+}
+
+.quit-botton-position{
+  position:relative;
+  bottom: 100px;
+}

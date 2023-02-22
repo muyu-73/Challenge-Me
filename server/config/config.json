@@ -1,0 +1,34 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": null,
+    "database": "icehotpot",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "port": "5432"        
+  },
+  "test": {
+    "username": "postgres",
+    "password": null,
+    "database": "icehotpot",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "port": "5432"
+  },
+  "production": {
+    "username": "postgres",
+    "password": null,
+    "database": "icehotpot",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "port": "5432"
+  },
+  "docker": {
+    "username": "postgres",
+    "password": "12345",
+    "database": "icehotpot_db",
+    "host": "node_db",
+    "port": "5432",
+    "dialect": "postgres"
+  }
+}
